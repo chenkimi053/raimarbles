@@ -1,3 +1,8 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://raimarbles.com"
+languageCode = "en-us"
+title = "Rai Marbles - Premium Indian Stone Since 2004"
+theme = "ananke"
+
+[params]
+    header_image = "images/heading.jpg"
+    description = "20 Years of Excellence | Direct from Rajasthan Quarries | PAN India Delivery"
