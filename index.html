@@ -13,19 +13,20 @@
         }
 
         :root {
-            --primary: #8B4513;
-            --secondary: #D2691E;
-            --accent: #CD853F;
-            --dark: #2C1810;
-            --light: #F5F5DC;
+            --primary: #4A5568;      /* Slate Gray */
+            --secondary: #D4A574;    /* Warm Sandstone */
+            --accent: #2B6CB0;       /* Stone Blue */
+            --dark: #2D3748;         /* Dark Charcoal */
+            --light: #F7FAFC;        /* Cool White */
             --white: #FFFFFF;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--dark);
             overflow-x: hidden;
+            background-color: var(--white);
         }
 
         /* Header & Navigation */
@@ -88,7 +89,7 @@
         /* Hero Section */
         .hero {
             margin-top: 80px;
-background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg');
+            background: linear-gradient(rgba(71, 85, 104, 0.85), rgba(45, 55, 72, 0.9)), url('images/hero.jpg');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -137,9 +138,9 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
         }
 
         .btn-primary:hover {
-            background: var(--secondary);
+            background: #2C5282;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(205, 133, 63, 0.4);
+            box-shadow: 0 5px 15px rgba(43, 108, 176, 0.4);
         }
 
         .btn-secondary {
@@ -172,7 +173,7 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
         .stat-number {
             font-size: 3rem;
             font-weight: bold;
-            color: var(--accent);
+            color: var(--secondary);
         }
 
         .stat-label {
@@ -215,11 +216,12 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: all 0.3s;
             cursor: pointer;
+            border: 1px solid #E2E8F0;
         }
 
         .product-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .product-image {
@@ -250,20 +252,13 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
 
         .product-details li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #E2E8F0;
             display: flex;
             justify-content: space-between;
         }
 
         .product-details strong {
             color: var(--primary);
-        }
-
-        .product-price {
-            font-size: 1.3rem;
-            color: var(--accent);
-            font-weight: bold;
-            margin-top: 1rem;
         }
 
         /* Gallery Section */
@@ -282,7 +277,7 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
 
         .gallery-item {
             height: 300px;
-            background: linear-gradient(135deg, #6B4423 0%, #8B4513 50%, #A0522D 100%);
+            background: linear-gradient(135deg, #4A5568 0%, #2B6CB0 50%, #D4A574 100%);
             border-radius: 10px;
             overflow: hidden;
             position: relative;
@@ -300,7 +295,7 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(45, 55, 72, 0.85);
             color: white;
             padding: 1rem;
             text-align: center;
@@ -333,6 +328,7 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             text-align: center;
             transition: all 0.3s;
+            border: 1px solid #E2E8F0;
         }
 
         .contact-card:hover {
@@ -493,7 +489,27 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
             <div class="stat-label">Customer Support</div>
         </div>
     </section>
-
+<!-- Add after Stats section -->
+    <section class="why-us" style="background: var(--light); padding: 4rem 2rem;">
+    <h2 class="section-title">Why Retail Partners Trust Rai Marbles</h2>
+    <div class="why-grid" style="max-width: 1200px; margin: 3rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div class="why-card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 3rem; color: var(--accent);">🚛</div>
+            <h3>All-India Delivery</h3>
+            <p>Reliable logistics to any location across India</p>
+        </div>
+        <div class="why-card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 3rem; color: var(--accent);">⚖️</div>
+            <h3>Consistent Quality</h3>
+            <p>Direct from quarries - no middlemen</p>
+        </div>
+        <div class="why-card" style="text-align: center; padding: 2rem;">
+            <div style="font-size: 3rem; color: var(--accent);">📦</div>
+            <h3>Custom Orders</h3>
+            <p>Special cuts, finishes & bulk quantities</p>
+        </div>
+    </div>
+    </section>
     <!-- Products Section -->
     <section id="products" class="products">
         <h2 class="section-title">Our Premium Stone Collection</h2>
@@ -509,7 +525,6 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
                         <li><strong>Thickness:</strong> <span>20mm, 30mm, 40mm</span></li>
                         <li><strong>Uses:</strong> <span>Flooring, Pathways</span></li>
                     </ul>
-                    <div class="product-price">₹28-35 per sq ft</div>
                 </div>
             </div>
 
@@ -522,7 +537,6 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
                         <li><strong>Also:</strong> <span>Katni Green, Fantasy Brown</span></li>
                         <li><strong>Forms:</strong> <span>Slabs, Tiles, Custom</span></li>
                     </ul>
-                    <div class="product-price">Contact for Price</div>
                 </div>
             </div>
 
@@ -535,7 +549,6 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
                         <li><strong>Also:</strong> <span>Black Galaxy, Viscon</span></li>
                         <li><strong>Quality:</strong> <span>Export Grade</span></li>
                     </ul>
-                    <div class="product-price">Premium Quality</div>
                 </div>
             </div>
 
@@ -548,7 +561,6 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
                         <li><strong>Uses:</strong> <span>Pool Coping, Garden</span></li>
                         <li><strong>Feature:</strong> <span>Weather Resistant</span></li>
                     </ul>
-                    <div class="product-price">Best for Outdoors</div>
                 </div>
             </div>
         </div>
@@ -561,46 +573,54 @@ background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.
         
         <div class="gallery-grid">
             <div class="gallery-item" style="background: url('images/gallery1.png') center/cover;"></div>
-<div class="gallery-item" style="background: url('images/gallery2.jpg') center/cover;"></div>
-<div class="gallery-item" style="background: url('images/gallery3.jpg') center/cover;"></div>
-<div class="gallery-item" style="background: url('images/gallery4.jpg') center/cover;"></div>
-<div class="gallery-item" style="background: url('images/gallery5.jpg') center/cover;"></div>
-<div class="gallery-item" style="background: url('images/hero.jpg') center/cover;"></div>
-<div class="gallery-item" style="background: url('images/gallery1.png') center/cover;"></div>
+            <div class="gallery-item" style="background: url('images/gallery2.jpg') center/cover;"></div>
+            <div class="gallery-item" style="background: url('images/gallery3.jpg') center/cover;"></div>
+            <div class="gallery-item" style="background: url('images/gallery4.jpg') center/cover;"></div>
+            <div class="gallery-item" style="background: url('images/gallery5.jpg') center/cover;"></div>
+            <div class="gallery-item" style="background: url('images/hero.jpg') center/cover;"></div>
+            <div class="gallery-item" style="background: url('images/gallery1.png') center/cover;"></div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact for Instant Quote</h2>
-        <p class="section-subtitle">We're here to help with your stone requirements</p>
-        
-        <div class="contact-grid">
-            <div class="contact-card">
-                <div class="contact-icon">📱</div>
-                <h3>WhatsApp</h3>
-                <a href="https://wa.me/91XXXXXXXXXX">+91-9414187776</a>
-                <p style="margin-top: 1rem; color: #666;">Click to chat instantly</p>
-            </div>
-
-            <div class="contact-card">
-                <div class="contact-icon">✉️</div>
-                <h3>Email</h3>
-                <a href="mailto:info@raimarbles.com">info@raimarbles.com</a>
-                <p style="margin-top: 1rem; color: #666;">We reply within 24 hours</p>
-            </div>
-
-            <div class="contact-card">
-                <div class="contact-icon">📍</div>
-                <h3>Location</h3>
-                <p><strong>Kota, Rajasthan</strong></p>
-                <p style="margin-top: 1rem; color: #666;">India's Premier Stone Hub</p>
-            </div>
+    <!-- Replace Contact Section -->
+<section id="contact" class="contact">
+    <h2 class="section-title">Get Instant Wholesale Quote</h2>
+    <form id="quoteForm" style="max-width: 600px; margin: 2rem auto;">
+        <div style="display: grid; gap: 1rem;">
+            <input type="text" placeholder="Your Name *" required style="padding: 1rem; border: 1px solid #E2E8F0; border-radius: 8px;">
+            <input type="text" placeholder="Shop/Company Name *" required style="padding: 1rem; border: 1px solid #E2E8F0; border-radius: 8px;">
+            <input type="tel" placeholder="Mobile Number *" required style="padding: 1rem; border: 1px solid #E2E8F0; border-radius: 8px;">
+            <select required style="padding: 1rem; border: 1px solid #E2E8F0; border-radius: 8px;">
+                <option value="">Select Stone Type *</option>
+                <option>Kota Stone</option>
+                <option>Marble</option>
+                <option>Granite</option>
+                <option>Sandstone</option>
+            </select>
+            <textarea placeholder="Quantity, Location & Requirements..." rows="4" style="padding: 1rem; border: 1px solid #E2E8F0; border-radius: 8px;"></textarea>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Quote Request</button>
         </div>
-    </section>
+    </form>
+</section>
+
+<!-- Add before </body> -->
+<script>
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const message = `NEW QUOTE REQUEST:
+Name: ${this[0].value}
+Company: ${this[1].value}
+Mobile: ${this[2].value}
+Stone: ${this[3].value}
+Details: ${this[4].value}`;
+    
+    window.open(`https://wa.me/919414187776?text=${encodeURIComponent(message)}`, '_blank');
+});
+</script>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919414187776" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/919414187776?text=Hello%20Rai%20Marbles,%20I'm%20a%20retailer%20interested%20in%20bulk%20stone%20supply.         %20Please%20share%20your%20catalog%20and%20pricing." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         💬
     </a>
 
