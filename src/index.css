@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --color-charcoal: #2D2D2D;
+    --color-warm-sand: #C9A96E;
+    --color-stone-blue: #3A5A6C;
+    --color-mist: #F5F3EF;
+    --color-parchment: #F0EDE6;
+    --color-white: #FFFFFF;
+    --color-whatsapp: #25D366;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-charcoal);
+    background-color: var(--color-white);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-warm-sand);
+  }
+
+  .btn-primary {
+    background-color: var(--color-warm-sand);
+    color: var(--color-charcoal);
+    padding: 16px 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(201, 169, 110, 0.4);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-charcoal);
+    padding: 16px 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--color-warm-sand);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-warm-sand);
+    color: var(--color-charcoal);
+    transform: translateY(-2px);
+  }
+
+  .section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .content-max {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@layer utilities {
+  .text-charcoal { color: var(--color-charcoal); }
+  .text-warm-sand { color: var(--color-warm-sand); }
+  .text-stone-blue { color: var(--color-stone-blue); }
+  .text-charcoal-60 { color: rgba(45, 45, 45, 0.6); }
+  .text-white-70 { color: rgba(255, 255, 255, 0.7); }
+  .bg-charcoal { background-color: var(--color-charcoal); }
+  .bg-warm-sand { background-color: var(--color-warm-sand); }
+  .bg-stone-blue { background-color: var(--color-stone-blue); }
+  .bg-mist { background-color: var(--color-mist); }
+  .bg-parchment { background-color: var(--color-parchment); }
+  .bg-whatsapp { background-color: var(--color-whatsapp); }
+  .border-warm-sand { border-color: var(--color-warm-sand); }
+  .font-playfair { font-family: 'Playfair Display', serif; }
+  .font-inter { font-family: 'Inter', sans-serif; }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
